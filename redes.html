@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arma tu Contenido para RRSS - TrueLine</title>
+    
+    <!-- Fuentes y Fuentes de Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="IMAGENES/logo de proyecto.png">
+
+    <style>
+        /* Estilos específicos para la sección de Redes Sociales */
+        .redes-row {
+            display: flex;
+            align-items: stretch;
+            gap: 35px;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Contenedor de la imagen del celular */
+        .redes-img-card {
+            flex: 1;
+            min-width: 290px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .redes-img-card img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 25px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Tarjeta oscura con la información detallada */
+        .redes-info-card {
+            flex: 1.3;
+            min-width: 300px;
+            background-color: #2b2b2e;
+            color: #ffffff;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .redes-header-text h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .redes-header-text p.sub-header {
+            color: #8b5cf6;
+            font-weight: 700;
+            margin-top: 6px;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .redes-description {
+            font-size: 0.95rem;
+            color: #e4e4e7;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .section-highlight-title {
+            color: #d8b4fe;
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .redes-info-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            color: #e4e4e7;
+            margin-bottom: 20px;
+        }
+
+        .redes-info-card li {
+            margin-bottom: 6px;
+        }
+
+        /* Nota aclaratoria del pie */
+        .disclaimer-note {
+            background-color: #2b2b2e;
+            color: #a1a1aa;
+            padding: 18px 25px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            border-top: 1px solid #404045;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+
+        .action-container {
+            text-align: center;
+            margin: 35px 0 20px 0;
+        }
+
+        .btn-action-purple {
+            display: inline-block;
+            background-color: #6c5ce7;
+            color: #ffffff;
+            padding: 12px 32px;
+            font-weight: 700;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-action-purple:hover {
+            background-color: #5b4bc4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .redes-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Superior -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index_cliente.jsp" class="logo-container" style="text-decoration: none;">
+                <img src="IMAGENES/logo de proyecto.png" alt="Logo TrueLine" class="logo-img">
+                <span class="logo-text">TrueLine</span>
+            </a>
+            
+            <nav class="top-nav">
+                <a href="index_cliente.jsp" class="btn-nav"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+                <a href="solicitar_servicio.jsp" class="btn-nav btn-accent" style="text-decoration: none;"><i class="fas fa-plus-circle"></i> Solicitar servicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container container">
+        
+        <div class="redes-row">
+            
+            <!-- ESPACIO PARA TU FOTO DE REDES SOCIALES (Grabación / Celular) -->
+            <div class="redes-img-card">
+                <img src="IMAGENES/C3.png" alt="Arma tu contenido RRSS">
+            </div>
+
+            <!-- Información de Paquetes y Precios -->
+            <div class="redes-info-card">
+                <div class="redes-header-text">
+                    <h1>Arma tu contenido</h1>
+                    <p class="sub-header">Para RRSS</p>
+                </div>
+
+                <p class="redes-description">
+                    Desarrollo de contenido creativo para redes sociales, incluyendo textos, diseños y material audiovisual.
+                </p>
+
+                <div class="section-highlight-title">Valor estimado por contenido:</div>
+                <ul>
+                    <li><strong>Diseño estático:</strong> $45.000</li>
+                    <li><strong>Diseño animado:</strong> $60.000</li>
+                    <li><strong>Reel (incluye grabación y edición):</strong> $85.000</li>
+                    <li><strong>Edición reel (solo edición):</strong> $65.000</li>
+                </ul>
+
+                <div class="section-highlight-title">Descuentos por cantidad de piezas o servicios mensuales:</div>
+                <ul>
+                    <li><strong>5% OFF</strong> desde 6 unidades</li>
+                    <li><strong>10% OFF</strong> desde 9 unidades</li>
+                    <li><strong>12% OFF</strong> desde 12 unidades</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Nota al pie de los precios -->
+        <div class="disclaimer-note">
+            <strong>Nota:</strong> Los precios indicados pueden variar según las condiciones del mercado o los requerimientos específicos del cliente.
+        </div>
+
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; TrueLine. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

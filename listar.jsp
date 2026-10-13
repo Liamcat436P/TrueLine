@@ -1,5 +1,30 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*" %>
+<%
+    // Validación de seguridad para el rol de administrador
+    HttpSession sesion = request.getSession(false);
+    if (sesion == null || sesion.getAttribute("rol") == null) {
+        response.sendRedirect("login.jsp");
+        return;
+    }
+
+    String rol = sesion.getAttribute("rol").toString().trim().toLowerCase();
+
+    if (!"admin".equals(rol)) {
+        response.sendRedirect("index_visitantes.html");
+        return;
+    }
+%>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+    <!-- Tus estilos y enlaces -->
+</head>
+<body>
+    <!-- Contenido de la tabla -->
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -27,40 +52,40 @@
 
     <table>
         <tr>
-            <th>Cédula</th>
-            <th>Nombre</th>
-            <th>Correo</th>
-            <th>Teléfono</th>
-            <th>Empresa</th>
-            <th>Servicio</th>
-            <th>Nacimiento</th>
-            <th>Contraseña</th>
-            <th>Acciones</th>
-        </tr>
-        <%
-            ArrayList<String[]> lista = (ArrayList<String[]>) request.getAttribute("listaUsuarios");
-            
-            if (lista != null && !lista.isEmpty()) {
-                for (String[] usuario : lista) {
-        %>
-        <tr>
-            <td><%= usuario[0] %></td>
-            <td><%= usuario[1] %></td>
-            <td><%= usuario[2] %></td>
-            <td><%= usuario[3] %></td>
-            <td><%= usuario[4] %></td>
-            <td><%= usuario[5] %></td>
-            <td><%= usuario[6] %></td>
-            <td><%= usuario[7] %></td>
-            <td>
-                <a href="editar?cedula=<%= usuario[0] %>" class="btn-editar">Editar</a>
-                <a href="eliminar?cedula=<%= usuario[0] %>" class="btn-eliminar" onclick="return confirm('¿Seguro?')">Eliminar</a>
-            </td>
-        </tr>
-        <%
-                }
-            } else {
-        %>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Teléfono</th>
+        <th>Empresa</th>
+        <th>Servicio</th>
+        <th>Nacimiento</th>
+        <th>Rol</th> <!-- Inyawattay ti Rol ditoy -->
+        <th>Acciones</th> <!-- Saanen nga ikabil ti Contraseña ditoy -->
+    </tr>
+      <%
+    ArrayList<String[]> lista = (ArrayList<String[]>) request.getAttribute("listaUsuarios");
+    
+    if (lista != null && !lista.isEmpty()) {
+        for (String[] usuario : lista) {
+%>
+<tr>
+    <td><%= usuario[0] %></td> <!-- Cédula -->
+    <td><%= usuario[1] %></td> <!-- Nombre -->
+    <td><%= usuario[2] %></td> <!-- Correo -->
+    <td><%= usuario[3] %></td> <!-- Teléfono -->
+    <td><%= usuario[4] %></td> <!-- Empresa -->
+    <td><%= usuario[5] %></td> <!-- Servicio -->
+    <td><%= usuario[6] %></td> <!-- Nacimiento -->
+    <td><strong><%= usuario[8] %></strong></td> <!-- Rol (admin, diseñador, cliente) -->
+    <td>
+        <a href="editar?cedula=<%= usuario[0] %>" class="btn-editar">Editar</a>
+        <a href="eliminar?cedula=<%= usuario[0] %>" class="btn-eliminar" onclick="return confirm('¿Seguro?')">Eliminar</a>
+    </td>
+</tr>
+<%
+        }
+    } else {
+%>
         <tr>
             <td colspan="8" style="text-align:center;">No hay usuarios registrados.</td>
         </tr>
@@ -68,6 +93,6 @@
             }
         %>
     </table>
-    <a href="index.html" class="enlace-volver">← Volver al inicio</a>
+    <a href="AdminDashboardServlet" class="enlace-volver">← Volver al inicio</a>
 </body>
 </html>

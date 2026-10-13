@@ -8,26 +8,39 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-    private static final long serialVersionUID = 10L;
+    private static final long serialVersionUID = 1L;
 
-    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String correo = request.getParameter("correo");
-        String contrasena = request.getParameter("contrasena"); // Contraseña en texto plano desde el formulario
+        String contrasena = request.getParameter("contrasena");
 
         GestorUsuarios gestor = new GestorUsuarios();
-        String nombreUsuario = gestor.validarLogin(correo, contrasena);
+        
+        // Validamos el ingreso con tu método habitual
+        String[] usuario = gestor.validarIngreso(correo, contrasena);
 
-        if (nombreUsuario != null) {
-            // LOGIN CORRECTO: Se crea la sesión HTTP (el estado de logueado)
-            HttpSession sesion = request.getSession();
-            sesion.setAttribute("usuarioLogueado", nombreUsuario);
-            sesion.setAttribute("correoUsuario", correo);
+        if (usuario != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("usuarioLogueado", usuario[1]); 
+            session.setAttribute("rol", usuario[8]);  
+            session.setAttribute("correoUsuario", usuario[2]);
 
-            // Redirige al panel principal o lista de usuarios
-            response.sendRedirect("consultar");
+            String rol = usuario[8];
+            if (rol != null) {
+                rol = rol.trim().toLowerCase();
+            }
+
+            // Redirección por roles protegida y estricta
+            if ("admin".equals(rol)) {
+                response.sendRedirect("AdminDashboardServlet"); // Redirige al nuevo Panel de Administración
+            } else if ("diseñador".equals(rol) || "disenador".equals(rol)) {
+                response.sendRedirect("panel_diseno.jsp"); 
+            } else {
+                response.sendRedirect("index_cliente.jsp"); // Panel exclusivo para clientes logueados
+            }
+
         } else {
-            // LOGIN INCORRECTO: Regresa al login y envía un parámetro de error
+            // Error unificado para credenciales incorrectas o usuario inexistente
             response.sendRedirect("login.jsp?error=true");
         }
     }

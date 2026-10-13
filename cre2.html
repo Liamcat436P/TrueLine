@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de Sitio Web - TrueLine</title>
+    
+    <!-- Fuentes y Fuentes de Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="IMAGENES/logo de proyecto.png">
+
+    <style>
+        /* Banner de Título */
+        .web-title-banner {
+            background-color: #2b2b2e;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .web-title-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .web-title-banner p {
+            color: #8b5cf6;
+            font-weight: 700;
+            margin-top: 8px;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        /* Sección principal con imagen */
+        .web-hero-card {
+            background-color: #2b2b2e;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .web-img-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 25px auto;
+        }
+
+        .web-img-container img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .web-hero-desc {
+            font-size: 1.05rem;
+            color: #e4e4e7;
+            line-height: 1.7;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .web-hero-desc strong {
+            color: #d8b4fe;
+        }
+
+        /* Cuadrícula de Paquetes Web */
+        .web-plans-grid {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .web-plan-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 380px;
+            background-color: #2b2b2e;
+            color: #ffffff;
+            padding: 28px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .plan-title {
+            color: #d8b4fe;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .plan-subtitle {
+            font-size: 0.88rem;
+            color: #a1a1aa;
+            margin-bottom: 18px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .web-plan-card ul {
+            list-style-type: disc;
+            padding-left: 18px;
+            line-height: 1.6;
+            font-size: 0.88rem;
+            color: #e4e4e7;
+        }
+
+        .web-plan-card li {
+            margin-bottom: 6px;
+        }
+
+        /* Tarjeta de Características Generales */
+        .web-features-card {
+            background-color: #2b2b2e;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            margin-bottom: 30px;
+        }
+
+        .features-title {
+            color: #8b5cf6;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .features-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+        }
+
+        .feature-item i {
+            font-size: 2rem;
+            color: #d8b4fe;
+            margin-bottom: 10px;
+        }
+
+        .feature-item h4 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+        }
+
+        .action-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+
+        .btn-action-purple {
+            display: inline-block;
+            background-color: #6c5ce7;
+            color: #ffffff;
+            padding: 14px 36px;
+            font-weight: 700;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-action-purple:hover {
+            background-color: #5b4bc4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .web-plans-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Superior -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index_cliente.jsp" class="logo-container" style="text-decoration: none;">
+                <img src="IMAGENES/logo de proyecto.png" alt="Logo TrueLine" class="logo-img">
+                <span class="logo-text">TrueLine</span>
+            </a>
+            
+            <nav class="top-nav">
+                <a href="index_visitantes.html" class="btn-nav"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container container">
+        
+        <!-- Banner del Título -->
+        <section class="web-title-banner">
+            <h1>Diseño de Sitio Web</h1>
+            <p>Páginas web personalizadas de acuerdo a tus objetivos, necesidades y visión</p>
+        </section>
+
+        <!-- Bloque Principal de Presentación -->
+        <div class="web-hero-card">
+            <!-- RUTA DE TU FOTO DE PANTALLA/IMAC -->
+            <div class="web-img-container">
+                <img src="IMAGENES/C4.png" alt="Diseño de Sitio Web">
+            </div>
+
+            <p class="web-hero-desc">
+                Cada proyecto es único. Creamos páginas web personalizadas de acuerdo a tus objetivos, necesidades y visión. 
+                El diseño y desarrollo se ajustan completamente a lo que tu marca requiere para destacar en el mundo digital. 
+                <strong>Solicita tu Brief para comenzar.</strong>
+            </p>
+        </div>
+
+        <!-- Soluciones / Paquetes Disponibles -->
+        <div class="web-plans-grid">
+            
+            <!-- OPCCIÓN 1 -->
+            <div class="web-plan-card">
+                <div class="plan-title">Landing Page</div>
+                <p class="plan-subtitle">Ideal para promocionar un producto, servicio específico o campaña publicitaria directa.</p>
+                <ul>
+                    <li>Diseño One-Page de alto impacto visual</li>
+                    <li>Estructura orientada a la conversión (CTA)</li>
+                    <li>Integración con botones de WhatsApp / Redes</li>
+                    <li>Diseño 100% Adaptable a Celulares (Responsive)</li>
+                    <li>Formulario de contacto funcional</li>
+                </ul>
+            </div>
+
+            <!-- OPCCIÓN 2 -->
+            <div class="web-plan-card">
+                <div class="plan-title">Sitio Web Corporativo</div>
+                <p class="plan-subtitle">Pensado para empresas y profesionales que buscan consolidar su presencia e imagen digital.</p>
+                <ul>
+                    <li>Múltiples secciones (Inicio, Nosotros, Servicios, Contacto)</li>
+                    <li>Diseño UX/UI personalizado para tu marca</li>
+                    <li>Optimización básica de velocidad y SEO</li>
+                    <li>Autoadministrable para gestión de contenidos</li>
+                    <li>Certificado de Seguridad SSL e integración web</li>
+                </ul>
+            </div>
+
+            <!-- OPCCIÓN 3 -->
+            <div class="web-plan-card">
+                <div class="plan-title">Tienda Online / E-commerce</div>
+                <p class="plan-subtitle">Perfecto para marcas que desean vender productos o servicios por internet de forma automática.</p>
+                <ul>
+                    <li>Catálogo interactivo de productos con categorías</li>
+                    <li>Pasarela de pagos en línea (MercadoPago, Bold, etc.)</li>
+                    <li>Carrito de compras y gestión de inventario</li>
+                    <li>Panel de administración de pedidos</li>
+                    <li>Capacitación básica para el manejo de tu tienda</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Garantías / Beneficios de la Creación Web -->
+        <div class="web-features-card">
+            <div class="features-title">¿Qué incluyen nuestras soluciones web?</div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>Diseño Responsive</h4>
+                    <p>Adaptado perfectamente a cualquier dispositivo movil, tablet o pantalla.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h4>Carga Rápida</h4>
+                    <p>Optimización para garantizar el mejor tiempo de respuesta y fluidez.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Diseño a Medida</h4>
+                    <p>Respetando la línea gráfica, colores y tipografías de tu marca.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; TrueLine. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

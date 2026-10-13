@@ -16,7 +16,7 @@
             if ("true".equals(error)) { 
         %>
             <div style="background-color: #ffcccc; color: #cc0000; padding: 10px; border-radius: 15px; text-align: center; margin-bottom: 15px; font-weight: 600;">
-                ❌ Credenciales incorrectas.
+                ❌ Credenciales incorrectas o usuario inexistente.
             </div>
         <% } %>
 
@@ -28,7 +28,7 @@
 
             <div class="form-group">
                 <label>Contraseña</label>
-                <input type="password" name="contrasena" required placeholder="••••••••">
+                <input type="password" name="contrasena" required placeholder="•••••••••••••">
             </div>
 
             <button type="submit">Entrar al Sistema</button>

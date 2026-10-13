@@ -1,204 +1,290 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-  *{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	text-decoration: none;
-	list-style: none;
-}
-body {
-	font-family: 'Poppins', sans-serif;
-}
- .header{
- 	background-color: white;
- }
- .menu{
- 	display: flex;
- 	align-items: center;
-    flex-direction: row-reverse;
- }
-.logo{
-	color: #909497;
-	font-size: 71px;
-	font-weight: 800;
-	text-transform: uppercase;
-}
-
-.footer {
-	border-top: 1px solid #1B1B1D2B;
-	padding: 20px 0;
-}
-
-.footer-content{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.footer-content ul {
-	display: flex;
-}
-.footer-content ul li a {
-	display: block;
-    padding: 10px;
-    color: 1B1B1D;
-    font-size: 18px;
-    font-weight: 600;
-}
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-/* Variables para cambiar colores rápido */
 :root {
-    --primary-color: #6F36E8; /* El morado de tu diseño */
-    --bg-gray: #D9D9D9;
-    --white: #ffffff;
+    --primary-color: #6F36E8;
+    --primary-dark: #5521c7;
+    --bg-body: #f4f5f8;
+    --bg-card: #3a3a3d;
+    --text-dark: #1b1b1d;
+    --text-light: #ffffff;
+    --text-muted: #a0a0a5;
 }
-.services{
-	padding: 24px 0;
-	text-align: center;
-}
-h3{
-	color: #e4e4ef;
-	font-size: 24px;
-}
-h2{
-	color: #4444e6;
-	font-size: 40px;
-}
-.services-14{
-	display: flex;
-	justify-content: space-between;
-	padding: 80px o;
-    flex-direction: column;
-}
-.services-content1 {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 50px;
-}
-.services-content1 {
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    width: 230px;
-    box-shadow: 0 0 20px rgba(89, 34, 207, 0.781);
-    border-radius: 60px;
-    background-color: #585858;
-}
-.services-content1 img {
-    width: 180px;
-	height: 180px;
-    border-radius: 20%;
-	margin-bottom: 5px;
-}
-.services-1{
-	display: flex;
-	justify-content: space-between;
-	padding: 80px o;
-}
-.services-content {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 50px;
-}
-.services-content {
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 15px;
-}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
-    body {
-        /* Centramos el contenedor en medio de la pantalla */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        flex-direction: column; /* Evita que los elementos se pongan uno al lado del otro */
-    }
-
-
-/* Contenedor del Celular */
-.app-container {
-    width: 900%;
-    max-width: 100px; /* Tamaño típico de celular */
-    height: 1vh;
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
 }
 
+/* Contenedor central alineado */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* --- ENCABEZADO Y NAVEGACIÓN --- */
 .header {
-    grid-column: 2; /* Movemos el logo al lado derecho */
-    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    display: flex;
-	justify-content: space-between;
-	padding: 80px o;
 }
 
-/* El cuadro gris redondeado de tu captura */
-.main-content {
-    background-color: var(--bg-gray);
-    flex-grow: 1;
-    border-radius: 0 80px 80px 0; /* Solo redondeado a la derecha como en tu foto */
+.logo-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 40px;
-    display: flex;
-	justify-content: space-between;
-	padding: 80px o;
+    align-items: center;
+    gap: 12px;
 }
 
-.nav-menu {
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-text {
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.top-nav {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-nav {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 1px solid #e0e0e0;
+    padding: 9px 18px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-nav:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.btn-nav.btn-accent {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border-color: var(--primary-color);
+}
+
+.btn-nav.btn-accent:hover {
+    background-color: var(--primary-dark);
+}
+
+/* --- PANEL PRINCIPAL DE BIENVENIDA --- */
+.main-container {
+    flex: 1;
+    padding: 40px 0;
+}
+
+.welcome-banner {
+    background: linear-gradient(135deg, #1b1b1d 0%, #2d2d30 100%);
+    border-radius: 20px;
+    padding: 40px;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.banner-text h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.banner-text h1 span {
+    color: var(--primary-color);
+}
+
+.banner-text p {
+    color: var(--text-muted);
+    font-size: 1rem;
+}
+
+/* --- CUADRÍCULA DE SERVICIOS --- */
+.services-section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+/* Distribución en 4 columnas para PC */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 220px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(111, 54, 232, 0.25);
+}
+
+.service-card h3 {
+    color: var(--text-light);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #c0c0c8;
+    font-size: 0.85rem;
+    line-height: 1.4;
 }
 
 .btn-primary {
-    transition: all 0.3s ease;
     background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 25px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: transform 0.2s;
+    color: var(--text-light);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: background 0.25s ease;
+    width: 100%;
+    text-align: center;
 }
+
 .btn-primary:hover {
-    background-color: #5a2bbd; /* Un morado un poco más oscuro */
-    transform: translateY(-3px); /* El botón sube un poquito */
-    box-shadow: 0 5px 15px rgba(111, 54, 232, 0.4); /* Sombra morada */
+    background-color: var(--primary-dark);
 }
 
-.btn-primary:active {
-    transform: scale(0.95);
+/* --- ICONOS DE SOPORTE --- */
+.media-section {
+    padding: 10px 0 30px;
 }
 
+.media-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
 
-/* --- RESPONSIVE (PC) --- */
-@media (min-width: 768px) {
-    .app-container {
-        max-width: 1000px; /* Se expande en computador */
+.media-card {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.media-card img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* --- PIE DE PÁGINA --- */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+    padding: 25px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 1.1rem;
+    transition: color 0.25s ease;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+}
+
+/* --- ADAPTACIÓN RESPONSIVA (PANTALLAS MEDIANAS Y PEQUEÑAS) --- */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
     }
     
-    .main-content {
-        border-radius: 40px; /* Menos exagerado en PC */
-        flex-direction: row; /* Podrías poner los botones a un lado */
+    .top-nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
-    
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 12px;
+    }
 }

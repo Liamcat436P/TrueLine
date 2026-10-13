@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Logotipo a Marca - TrueLine</title>
+    
+    <!-- Fuentes y Fuentes de Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="IMAGENES/logo de proyecto.png">
+
+    <style>
+        /* Ajustes para adaptar los paquetes a las tarjetas oscuras de la interfaz */
+        .branding-title-banner {
+            background-color: #2b2b2e;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .branding-title-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .branding-title-banner p {
+            color: #8b5cf6;
+            font-weight: 700;
+            margin-top: 5px;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        /* Filas de contenido */
+        .branding-row {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .branding-row.reverse {
+            flex-direction: row-reverse;
+        }
+
+        /* Contenedor de la foto con esquinas redondeadas como en tu referencia */
+        .branding-img-card {
+            flex: 1;
+            min-width: 280px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .branding-img-card img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 25px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Tarjeta oscura contenedora de información */
+        .branding-info-card {
+            flex: 1.2;
+            min-width: 280px;
+            background-color: #2b2b2e;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pkg-title {
+            color: #d8b4fe;
+            font-size: 1.05rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
+        .pkg-title:first-child {
+            margin-top: 0;
+        }
+
+        .branding-info-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.5;
+            font-size: 0.88rem;
+            color: #e4e4e7;
+        }
+
+        .branding-info-card li {
+            margin-bottom: 6px;
+        }
+
+        .sub-text {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .action-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+
+        /* Botón morado redondeado idéntico al de la interfaz */
+        .btn-action-purple {
+            display: inline-block;
+            background-color: #6c5ce7;
+            color: #ffffff;
+            padding: 12px 32px;
+            font-weight: 700;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-action-purple:hover {
+            background-color: #5b4bc4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .branding-row, .branding-row.reverse {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Superior -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index_cliente.jsp" class="logo-container" style="text-decoration: none;">
+                <img src="IMAGENES/logo de proyecto.png" alt="Logo TrueLine" class="logo-img">
+                <span class="logo-text">TrueLine</span>
+            </a>
+            
+            <nav class="top-nav">
+                <a href="index_cliente.jsp" class="btn-nav"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+               <a href="solicitar_servicio.jsp" class="btn-nav btn-accent" style="text-decoration: none;"><i class="fas fa-plus-circle"></i> Solicitar servicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container container">
+        
+        <!-- Banner del Título -->
+        <section class="branding-title-banner">
+            <h1>De Logotipo a Marca</h1>
+            <p>Escala tu identidad</p>
+        </section>
+
+        <!-- Bloque 1: Foto a la izquierda, Paquetes 1 y 2 a la derecha -->
+        <div class="branding-row">
+            
+            <!-- RUTA DE TU IMAGEN 1 -->
+            <div class="branding-img-card">
+                <img src="IMAGENES/C1.png" alt="Branding Logotipo">
+            </div>
+
+            <div class="branding-info-card">
+                <div class="pkg-title">PAQUETE 1 — LOGOTIPO</div>
+                <ul>
+                    <li>Diseño de logotipo principal</li>
+                    <li>2 propuestas creativas + ajustes básicos</li>
+                    <li>Variaciones del logo: Horizontal, Vertical, Isotipo (si aplica)</li>
+                    <li>Paleta de colores básica</li>
+                    <li>Tipografías utilizadas</li>
+                    <li>Entrega en formatos: PNG, JPG, PDF, SVG o AI (vector editable)</li>
+                </ul>
+
+                <div class="pkg-title">PAQUETE 2 — LOGOTIPO + IDENTIDAD VISUAL</div>
+                <p class="sub-text">Incluye todo lo del paquete anterior +:</p>
+                <ul>
+                    <li>Mini manual de identidad visual</li>
+                    <li>Definición visual de marca: Uso correcto del logo, colores corporativos, tipografías oficiales, estilo visual.</li>
+                    <li>Elementos gráficos complementarios: Íconos, patrones, recursos visuales</li>
+                    <li>Diseño de: Foto de perfil, portada/redes sociales, 3 plantillas editables para publicaciones o historias, mockups de presentación de marca</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bloque 2: Paquete 3 a la izquierda, Foto a la derecha -->
+        <div class="branding-row reverse">
+            
+            <!-- RUTA DE TU IMAGEN 2 -->
+            <div class="branding-img-card">
+                <img src="IMAGENES/C2.png" alt="Branding Completo">
+            </div>
+
+            <div class="branding-info-card">
+                <div class="pkg-title">PAQUETE 3 — LOGOTIPO + IDENTIDAD VISUAL + BRANDING COMPLETO</div>
+                <p class="sub-text">Incluye todo lo de los paquetes anteriores +:</p>
+                <ul>
+                    <li>Desarrollo conceptual de marca</li>
+                    <li>Estrategia básica de branding: personalidad de marca, voz y tono de comunicación, valores, diferencial de marca, público objetivo, manual de marca más completo, sistema visual integral.</li>
+                    <li>Diseño de aplicaciones de marca: tarjeta personal, firma de correo, empaque o etiqueta (si aplica), papelería básica, feed guía para Instagram, dirección creativa para contenido, presentación profesional de marca.</li>
+                </ul>
+            </div>
+        </div>
+

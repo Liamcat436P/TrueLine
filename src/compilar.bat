@@ -1,17 +1,28 @@
 @echo off
-:: Definir rutas relativas (ajustadas para que funcionen dentro de la carpeta 'src')
-set LIB=..\WEB-INF\lib\servlet-api.jar
-set DESTINO=..\WEB-INF\classes
+echo =========================================
+echo  REORGANIZANDO Y COMPILANDO PROYECTO
+echo =========================================
 
-echo Iniciando compilacion...
+:: 1. Detener Tomcat para liberar los archivos .class bloqueados
+echo Deteniendo Tomcat...
+taskkill /F /IM java.exe /T 2>nul
 
-:: 1. Compilar y enviar directamente a WEB-INF\classes
-javac -cp "%LIB%" *.java -d "%DESTINO%"
+:: 2. Ir a la carpeta del proyecto
+cd /d C:\Users\or361\OneDrive\Documentos\apache-tomcat-9.0.118-windows-x64\apache-tomcat-9.0.118\webapps\WebContent
 
-echo.
-echo ========================================================
-echo ¡Exito! Los archivos .class se han generado en:
-echo %DESTINO%
-echo ========================================================
-echo.
+:: 3. Compilar todos los archivos Java de la carpeta src
+echo Compilando archivos .java...
+javac -encoding UTF-8 -cp "WEB-INF/lib/*;../../lib/*" -d WEB-INF/classes src/*.java
+
+if %ERRORLEVEL% EQU 0 (
+    echo.
+    echo ¡COMPILACION EXITOSA!
+    echo Reiniciando Tomcat...
+    :: 4. Volver a arrancar Tomcat automáticamente
+    start C:\Users\or361\OneDrive\Documentos\apache-tomcat-9.0.118-windows-x64\apache-tomcat-9.0.118\bin\startup.bat
+) else (
+    echo.
+    echo [ERROR] Hubo un problema al compilar. Revisa los errores arriba.
+)
+
 pause

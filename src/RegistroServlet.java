@@ -32,6 +32,6 @@ public class RegistroServlet extends HttpServlet {
 
         // 3. Responder al usuario en el navegador
         response.getWriter().println("<h1>¡Registro exitoso para " + nombre + "!</h1>");
-        response.getWriter().println("<a href='index.html'>Volver al formulario</a>");
+        response.getWriter().println("<a href='index_visitantes.html'>Volver</a>");
     }
 }

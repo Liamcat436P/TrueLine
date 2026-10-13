@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría Marketing - TrueLine</title>
+    
+    <!-- Fuentes y Iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="IMAGENES/logo de proyecto.png">
+
+    <style>
+        /* Banner de Título */
+        .marketing-title-banner {
+            background-color: #2b2b2e;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .marketing-title-banner h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .marketing-title-banner p {
+            color: #8b5cf6;
+            font-weight: 700;
+            margin-top: 8px;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+        }
+
+        /* Cuadrícula de planes lado a lado */
+        .marketing-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        /* Tarjeta oscura para cada plan */
+        .marketing-card {
+            flex: 1;
+            min-width: 320px;
+            max-width: 520px;
+            background-color: #2b2b2e;
+            color: #ffffff;
+            padding: 30px;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Contenedor de la imagen superior de cada plan */
+        .marketing-img-container {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .marketing-img-container img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .plan-title {
+            color: #d8b4fe;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .plan-subtitle {
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            margin-bottom: 20px;
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .marketing-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            color: #e4e4e7;
+        }
+
+        .marketing-card li {
+            margin-bottom: 8px;
+        }
+
+        .action-container {
+            text-align: center;
+            margin: 40px 0 20px 0;
+        }
+
+        /* Botón de acción morado */
+        .btn-action-purple {
+            display: inline-block;
+            background-color: #6c5ce7;
+            color: #ffffff;
+            padding: 12px 32px;
+            font-weight: 700;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .btn-action-purple:hover {
+            background-color: #5b4bc4;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .marketing-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado Superior -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="index_cliente.jsp" class="logo-container" style="text-decoration: none;">
+                <img src="IMAGENES/logo de proyecto.png" alt="Logo TrueLine" class="logo-img">
+                <span class="logo-text">TrueLine</span>
+            </a>
+            
+            <nav class="top-nav">
+                <a href="index_visitantes.html" class="btn-nav"><i class="fas fa-arrow-left"></i> Volver al Inicio</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="main-container container">
+        
+        <!-- Banner del Título -->
+        <section class="marketing-title-banner">
+            <h1>Consultoría Marketing</h1>
+            <p>Te ayudamos a darle dirección, claridad y estrategia a tu marca.</p>
+        </section>
+
+        <!-- Cuadrícula de Planes -->
+        <div class="marketing-grid">
+            
+            <!-- PLAN LITE -->
+            <div class="marketing-card">
+
+                <div class="plan-title">Plan Lite</div>
+                <p class="plan-subtitle">Ideal para emprendedores o marcas que quieren empezar a organizar su presencia digital.</p>
+                
+                <ul>
+                    <li>Revisión inicial de tu marca y redes sociales</li>
+                    <li>Recomendaciones para mejorar tu contenido</li>
+                    <li>Optimización básica de Instagram y Facebook</li>
+                    <li>1 sesión personalizada de asesoría (1 hora)</li>
+                    <li>Guía práctica con recomendaciones finales</li>
+                    <li>Soporte para resolver dudas durante el proceso</li>
+                </ul>
+            </div>
+
+            <!-- PLAN PREMIUM -->
+            <div class="marketing-card">
+                
+
+                <div class="plan-title">Plan Premium</div>
+                <p class="plan-subtitle">Pensado para marcas que quieren crecer con una estrategia más profesional y completa.</p>
+                
+                <ul>
+                    <li>Análisis completo de tu marca y competencia</li>
+                    <li>Estrategia personalizada de marketing digital</li>
+                    <li>Desarrollo y dirección visual de marca</li>
+                    <li>Diseño básico para redes sociales</li>
+                    <li>Acompañamiento y soporte continuo</li>
+                    <li>Informe mensual con avances y recomendaciones</li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copyright">&copy; TrueLine. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
