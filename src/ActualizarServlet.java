@@ -26,12 +26,12 @@ public class ActualizarServlet extends HttpServlet {
         gestor.actualizarUsuario(cedula, nombre, correo, telefono, empresa, servicio, nacimiento, contrasena);
 
         // Volvemos a la lista
-        response.sendRedirect("listar.jsp");
+        response.sendRedirect("consultar");
     }
 
     // 2. Por seguridad, puedes añadir esto también
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("listar.jsp");
+        response.sendRedirect("consultar");
     }
 }
